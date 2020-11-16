@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="Style.css">
+ 	<title>
+
+	</title>
+</head>
+<body>
+ <div id=Dash>
+   <div id="Logo">
+  <a href="index.html"><img src="Logo.png" alt="Logo" style="width:100px;height:100px;">></a>
+</div>
+  <nav id="Meny">
+    <ul>
+      <li><a style="background-color: black; color: white;" href="Topic1.html">Ämne 1</a></li>
+      <li><a href="Topic2.html">Ämne 2</a></li>
+      <li><a href="Topic3.html">Ämne 3</a></li>
+      <li><a href="Topic4.html">Ämne 4</a></li>
+    </ul>
+  </nav>
+</div>
+<div id="Text">
+
+<!-- a card div that is used as a template -->
+
+  <div class="Card">
+    <h1>Title of something</h1>
+
+    <p>
+      Maecenas tincidunt arcu id dui ornare dapibus.
+      Etiam in felis sollicitudin, tincidunt mi eget,
+      blandit libero. Integer lobortis eros erat, sit
+      amet iaculis velit porttitor eget. Ut feugiat eros
+      vel odio tristique sagittis.
+      Maecenas tincidunt arcu id dui ornare dapibus.
+      Etiam in felis sollicitudin, tincidunt mi eget,
+      blandit libero. Integer lobortis eros erat, sit
+      amet iaculis velit porttitor eget. Ut feugiat eros
+      vel odio tristique sagittis.
+      Maecenas tincidunt arcu id dui ornare dapibus.
+      Etiam in felis sollicitudin, tincidunt mi eget,
+      blandit libero. Integer lobortis eros erat, sit
+      amet iaculis velit porttitor eget. Ut feugiat eros
+      vel odio tristique sagittis.
+      Maecenas tincidunt arcu id dui ornare dapibus.
+      Etiam in felis sollicitudin, tincidunt mi eget,
+      blandit libero. Integer lobortis eros erat, sit
+      amet iaculis velit porttitor eget. Ut feugiat eros
+      vel odio tristique sagittis.
+      Maecenas tincidunt arcu id dui ornare dapibus.
+      Etiam in felis sollicitudin, tincidunt mi eget,
+      blandit libero. Integer lobortis eros erat, sit
+      amet iaculis velit porttitor eget. Ut feugiat eros
+      vel odio tristique sagittis.
+      Maecenas tincidunt arcu id dui ornare dapibus.
+      Etiam in felis sollicitudin, tincidunt mi eget,
+      blandit libero. Integer lobortis eros erat, sit
+      amet iaculis velit porttitor eget. Ut feugiat eros
+      vel odio tristique sagittis.
+      Maecenas tincidunt arcu id dui ornare dapibus.
+      Etiam in felis sollicitudin, tincidunt mi eget,
+      blandit libero. Integer lobortis eros erat, sit
+      amet iaculis velit porttitor eget. Ut feugiat eros
+      vel odio tristique sagittis.
+      Maecenas tincidunt arcu id dui ornare dapibus.
+      Etiam in felis sollicitudin, tincidunt mi eget,
+      blandit libero. Integer lobortis eros erat, sit
+      amet iaculis velit porttitor eget. Ut feugiat eros
+      vel odio tristique sagittis.
+      Maecenas tincidunt arcu id dui ornare dapibus.
+      Etiam in felis sollicitudin, tincidunt mi eget,
+      blandit libero. Integer lobortis eros erat, sit
+      amet iaculis velit porttitor eget. Ut feugiat eros
+      vel odio tristique sagittis.
+      Maecenas tincidunt arcu id dui ornare dapibus.
+      Etiam in felis sollicitudin, tincidunt mi eget,
+      blandit libero. Integer lobortis eros erat, sit
+      amet iaculis velit porttitor eget. Ut feugiat eros
+      vel odio tristique sagittis.
+      Maecenas tincidunt arcu id dui ornare dapibus.
+      Etiam in felis sollicitudin, tincidunt mi eget,
+      blandit libero. Integer lobortis eros erat, sit
+      amet iaculis velit porttitor eget. Ut feugiat eros
+      vel odio tristique sagittis.
+      Maecenas tincidunt arcu id dui ornare dapibus.
+      Etiam in felis sollicitudin, tincidunt mi eget,
+      blandit libero. Integer lobortis eros erat, sit
+      amet iaculis velit porttitor eget. Ut feugiat eros
+      vel odio tristique sagittis.
+      Maecenas tincidunt arcu id dui ornare dapibus.
+      Etiam in felis sollicitudin, tincidunt mi eget,
+      blandit libero. Integer lobortis eros erat, sit
+      amet iaculis velit porttitor eget. Ut feugiat eros
+      vel odio tristique sagittis.
+      Maecenas tincidunt arcu id dui ornare dapibus.
+      Etiam in felis sollicitudin, tincidunt mi eget,
+      blandit libero. Integer lobortis eros erat, sit
+      amet iaculis velit porttitor eget. Ut feugiat eros
+      vel odio tristique sagittis.
+      </p>
+
+  </div>
+</div>
+
+<div id="Quiz">
+  <!-- checks all the checkmarks that have an id from 1-16
+      then checks if the id from the checkmark is in the answerlist vector
+       and checked turns it green, if not in answerlist and checked turns it red
+       else turn it black -->
+  <script>
+
+  function CheckAnswers(){
+
+    var AnswerList = [2,6,8,3];
+    var CorrectCount = 0;
+    for (var i = 1; i < 16; i++) {
+      for (var j = 0; j < AnswerList.length; j++) {
+        if (!document.getElementById(i).checked) {
+           document.getElementById(i).parentElement.style.color = "black";
+        }
+        else if (i == AnswerList[j] ) {
+          CorrectCount++;
+          document.getElementById(i).parentElement.style.color = "green";
+          j = AnswerList.length;
+        } else {
+          document.getElementById(i).parentElement.style.color = "red";
+        }
+      }
+    }
+    document.getElementById('DisplayScore').innerHTML = (CorrectCount/AnswerList.length)*100 + "% Correct";
+  }
+
+
+   </script>
+
+  <div id="quizbox" class="Card">
+    <div class="Questionbox">
+      <div class="Question">
+        <h1> Question 1 </h1>
+      </div>
+      <div class="Answer">
+        <p><input id="1" type="checkbox"> (checkbox)</p>
+        <p><input id="2"type="checkbox"> (checkbox)</p>
+        <p><input id="3" type="checkbox"> (checkbox)</p>
+        <p><input id="4" type="checkbox"> (checkbox)</p>
+      </div>
+    </div>
+    <div class="Questionbox">
+      <div class="Question">
+        <h1> Question 1 </h1>
+      </div>
+      <div class="Answer">
+        <p><input id="5" type="checkbox"> (checkbox)</p>
+        <p><input id="6" type="checkbox"> (checkbox)</p>
+        <p><input id="7" type="checkbox"> (checkbox)</p>
+        <p><input id="8" type="checkbox"> (checkbox)</p>
+      </div>
+    </div>
+    <div class="Questionbox">
+      <div class="Question">
+        <h1> Question 1 </h1>
+      </div>
+      <div class="Answer">
+        <p><input id="9" type="checkbox"> (checkbox)</p>
+        <p><input id="10" type="checkbox"> (checkbox)</p>
+        <p><input id="11" type="checkbox"> (checkbox)</p>
+        <p><input id="12" type="checkbox"> (checkbox)</p>
+      </div>
+    </div>
+    <div class="Questionbox">
+      <div class="Question">
+        <h1> Question 1 </h1>
+      </div>
+      <div class="Answer">
+        <p><input id="13" type="checkbox"> (checkbox)</p>
+        <p><input id="14" type="checkbox"> (checkbox)</p>
+        <p><input id="15"type="checkbox"> (checkbox)</p>
+        <p><input id="16"type="checkbox"> (checkbox)</p>
+      </div>
+    </div>
+     <button class="submitbutton" onclick="CheckAnswers()" type="button">Submit</button>
+     <p id="DisplayScore"></p>
+
+  </div>
+</div>
+</body>
+</html>
